@@ -31,10 +31,7 @@ class student
 
     student();
 
-    void Takedata()
-    {
-    
-    }
+    //void Takedata();
 
     void Showdata()
     {
@@ -43,10 +40,25 @@ class student
         cout << "total :-> " << total << endl;
     }
 };
-student :: student
+student::student(void)
+{
+    cout << "Enter admno :-> ";
+    cin >> admno;
+    cin.ignore();
+    cout << "Enter student name :-> ";
+    gets(sname);
+    cout << "Enter mark english :-> ";
+    cin >> eng;
+    cout << "Enter mark maths :-> ";
+    cin >> math;
+    cout << "Enter mark science :-> ";
+    cin >> sci;
+
+    ctotal(eng,math,sci);
+}
 int main()
 {
     student data;
-    data.Takedata();
+    //data.Takedata();
     data.Showdata();
 }

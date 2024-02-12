@@ -26,7 +26,7 @@ class batsman
 
     float calcavg(int runs,int innings,int notout)
     {
-        batavg = runs/(innings-notout);
+        batavg = runs/(innings);
     }
 
     public:

@@ -39,6 +39,11 @@ class student
         cout << "student name :-> " << sname << endl;
         cout << "total :-> " << total << endl;
     }
+
+    ~student()
+    {
+        cout << "Dealocat memory";
+    }
 };
 student::student(void)
 {

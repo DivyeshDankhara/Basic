@@ -26,27 +26,12 @@ class batsman
 
     float calcavg(int runs,int innings,int notout)
     {
-        int batavg = runs/(innings-notout);
+        batavg = runs/(innings-notout);
     }
 
     public:
 
-    void readdata()
-    {
-        cout << "Enter the bcode :-> ";
-        cin >> bcode;
-        cin.ignore();
-        cout << "Enter the bname :-> ";
-        gets(bname);
-        cout << "Enter the innings :-> ";
-        cin >> innings;
-        cout << "Enter the number notout matches :-> ";
-        cin >> notout;
-        cout << "Enter the runs :-> ";
-        cin >> runs;
-
-        batavg=(runs,innings,notout);
-    }
+    batsman();
 
     void displaydata()
     {
@@ -58,10 +43,25 @@ class batsman
         cout << "Bats man average :-> "<< batavg << endl;
     }
 };
+batsman::batsman(void)
+{
+    cout << "Enter the bcode :-> ";
+    cin >> bcode;
+    cin.ignore();
+    cout << "Enter the bname :-> ";
+    gets(bname);
+    cout << "Enter the innings :-> ";
+    cin >> innings;
+    cout << "Enter the number notout matches :-> ";
+    cin >> notout;
+    cout << "Enter the runs :-> ";
+    cin >> runs;
+
+    calcavg(runs,innings,notout);
+}
 
 int main()
 {
     batsman obj;
-    obj.readdata();
     obj.displaydata();
 }

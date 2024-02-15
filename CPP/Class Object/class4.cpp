@@ -28,15 +28,15 @@ class DETAIL
     {
         if(Distance<=1000)
         {
-            Fuel = 500;
+            Fuel = (Distance*500)/1000;
         }
         else if(Distance>1000&&Distance<=2000)
         {
-            Fuel = 1100;
+            Fuel = 500+(((Distance-1000)*1100)/2000);
         }
         else if(Distance>2000)
         {
-            Fuel = 2200;
+            Fuel = 1150+(((Distance-2000)*2200)/2001);
         }
         return Fuel;
     }

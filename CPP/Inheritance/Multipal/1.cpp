@@ -13,6 +13,7 @@ class base1
         a1 = x1;
     }
 };
+
 class base2
 {
     protected:
